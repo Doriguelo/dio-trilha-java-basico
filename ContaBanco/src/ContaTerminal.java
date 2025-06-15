@@ -1,13 +1,20 @@
-public class ContaTerminal {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class ContaTerminal {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Por favor, digite o número da conta:");
+        int numero = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Por favor, digite o número da agência: ");
+        String agencia = sc.nextLine();
+        System.out.println("Por favor, digite o nome do cliente: ");
+        String nomeCliente = sc.nextLine();
+        System.out.println("Por favor, digite o saldo: ");
+        double saldo = sc.nextDouble();
+
+        System.out.printf("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo %.2f já está disponível para saque.\n", nomeCliente, agencia, numero, saldo);
+        sc.close();
     }
 }
